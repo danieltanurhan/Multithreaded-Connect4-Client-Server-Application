@@ -340,8 +340,8 @@ class Game {
             while(true){
                 output.println("SUBMIT-NAME");
                 playerName = input.nextLine();
-                if(playerName == null) {
-                    return;
+                if(playerName == null || playerName.equals("null")) {
+                    continue;
                 }
                 synchronized (connectedNames) {
                     if(!playerName.isBlank() && !connectedNames.contains(playerName)) {
@@ -446,7 +446,7 @@ class Game {
                         inProgress = true;
                         for(PrintWriter writer : writers) {
                             writer.println("RESET");
-                            writer.println("MESSAGE " + playerName + " has started a solo game ");
+                            writer.println("MESSAGE " + playerName + " has started a solo game against ABBOT.");
                         }
                     }
                 }

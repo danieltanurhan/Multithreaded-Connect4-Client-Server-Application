@@ -11,7 +11,7 @@ public class Client {
     Socket socket;
     Scanner input;
     PrintWriter output;
-    JFrame frame = new JFrame("DCT's Multiplayer Connect 4");
+    JFrame frame = new JFrame("Multiplayer Connect 4");
     JPanel boardPanel = new JPanel(new GridLayout(6, 6));
     JPanel chatPanel = new JPanel();
     JTextArea messageArea = new JTextArea(22,10); //where we read
