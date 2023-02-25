@@ -469,7 +469,7 @@ class Game {
             try {
                 if(playerNum != null) {
                     tileLoc = move(loc, this);
-                    if(tileLoc > 5 && tileLoc < 36) { //tileLoc != -1 &&
+                    if(tileLoc > 5 && tileLoc < 36) {
                         for(PrintWriter writer : writers) {
                             writer.println("VALID_MOVE" + playerNum + "" + tileLoc);
                         }
